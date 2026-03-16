@@ -6,6 +6,7 @@ on:
 env:
   AWS_REGION: us-east-1
   ECR_REPOSITORY: spring-boot-app
+  S3_BUCKET: tf-state-springapp-ibm-artur-2026
 
 jobs:
   destroy:
