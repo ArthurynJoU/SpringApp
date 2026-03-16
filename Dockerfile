@@ -8,7 +8,7 @@ RUN addgroup -S appgroup && adduser -S appuser -G appgroup
 RUN chown -R appuser:appgroup /app
 
 # Copy the JAR file
-COPY build/libs/*.jar app.jar
+COPY build/libs/*-SNAPSHOT.jar app.jar
 
 # Set Spring Boot actuator port
 ENV MANAGEMENT_SERVER_PORT=8080

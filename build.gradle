@@ -55,6 +55,7 @@ bootJar {
 import java.text.SimpleDateFormat
 
 jar {
+    enabled = false
 	manifest {
 		attributes "Implementation-Title": "demo"
 		attributes "Implementation-Version": version
