@@ -110,6 +110,15 @@ jobs:
           chmod +x gradlew
           ./gradlew build
 
+      - name: Debug Secrets
+        run: |
+          if [ -z "${{ secrets.AWS_ACCESS_KEY_ID }}" ]; then
+            echo "ERROR: GitHub cannot see the secret AWS_ACCESS_KEY_ID!"
+            exit 1
+          else
+            echo "GREAT: GitHub can see the secret AWS_ACCESS_KEY_ID."
+          fi
+
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v2
         with:
