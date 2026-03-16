@@ -13,7 +13,7 @@ env:
   ECS_CLUSTER: spring-boot-app-cluster    # Should match cluster name in terraform
   ECS_SERVICE: spring-boot-app-service    # Should match service name in terraform
   TASK_DEFINITION: task-definition.json
-  S3_BUCKET: my-terraform-state-bucket-123
+  S3_BUCKET: tf-state-springapp-ibm--artur-2026
 jobs:
   terraform:
     name: "Terraform Infrastructure"
